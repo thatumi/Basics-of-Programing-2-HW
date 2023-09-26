@@ -8,5 +8,7 @@ Az első kör után itemek is spawnolnak, amivel életerőnket és hpnkat tudjuk
 
 A parancssorban látjuk minden lépésnél, hogy mivel mit tudunk csinálni, illetve DoxyGen doksi is van.
 
+(A cportatest fájlokról annyit, hogy ez az egyetemnek volt automatikus tesztelő weboldala.)
+
 
 
