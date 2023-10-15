@@ -6,7 +6,7 @@ The objective of the game is to defeat a bat and an archer.
 
 After the first round, items spawn, allowing us to replenish our health and HP.
 
-In the command line, you can see what actions you can take at each step, and there is also documentation available.
+In the command line, you can see what actions you can take at each step.
 
 (Note: The "cportatest" files were part of the university's automatic testing website.)
 
