@@ -13,6 +13,7 @@ gameState gameEngine::menu() {
         std::cout << "Invalid input. j = start game, m = map editor, l = load map from a file, k = exit" << std::endl;
         std::cin >> keyIn;
     }
+
     if (keyIn == 'j') {
         gameStateField = gameState::inGame;
     }

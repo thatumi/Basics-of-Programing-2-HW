@@ -47,13 +47,13 @@ public:
      * @param x - The x position we want to read from
      * @param y - The y position we want to read from
      **/
-    char getArrayValue(int x, int y);
+    char getArrayValue(int x, int y) const;
 
     /**
      * @brief This function saves the map
      * @details By iterating through the 2D dynamic array, it writes the map's values to a 'newmap.rmap' file.
      **/
-    void saveMap();
+    void saveMap() const;
 
     /**
      * @brief This function allows us to edit the map
@@ -71,17 +71,17 @@ public:
      * @brief Function responsible for rendering the map
      * @details The function iterates through the array and prints its contents one by one. As '-' represents walkable terrain, it prints a space instead.
      **/
-    void renderMap();
+    void renderMap() const;
 
     /**
      * @brief Getter that returns the X size of the dynamic array
      **/
-    int map::getSizeX() { return sizeX; }
+    int map::getSizeX() const{ return sizeX; }
 
     /**
      * @brief Getter that returns the Y size of the dynamic array
      **/
-    int map::getSizeY() { return sizeY; }
+    int map::getSizeY() const { return sizeY; }
 
 
     /**

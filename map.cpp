@@ -16,11 +16,11 @@ void map::setArrayValue(int x, int y, char value) {
     mapArray[x * sizeX + y] = value;
 }
 
-char map::getArrayValue(int x, int y) {
+char map::getArrayValue(int x, int y) const{
     return mapArray[x * sizeX + y];
 }
 
-void map::saveMap() {
+void map::saveMap() const {
     std::ofstream mapFile("newmap.rmap");
 
     for (int i = 0; i < sizeX; ++i) {
@@ -93,7 +93,7 @@ void map::loadMap() {
     infile.close();
 }
 
-void map::renderMap() {
+void map::renderMap() const{
     for (int i = 0; i < sizeX; ++i) {
         for (int j = 0; j < sizeY; ++j) {
             if (mapArray[j * sizeX + i] != '-') {

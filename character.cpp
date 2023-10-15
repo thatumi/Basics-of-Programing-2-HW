@@ -7,7 +7,7 @@
 #include "character.h"
 
 
-bool character::canMoveTo(int x, int y, map& mapOne) {
+bool character::canMoveTo(int x, int y, map& mapOne) const {
     if (x != -1 && y != -1 && x != mapOne.getSizeX() && y != mapOne.getSizeY()) {
         char check = mapOne.getArrayValue(x, y);
         if (check != 'x') {
@@ -31,7 +31,6 @@ int character::moveCharacter(char input, map& mapOne) {
         else {
             return 2;
         }
-        break;
     case 'A':
         newPosX -= 1;
         if (canMoveTo(newPosX, newPosY, mapOne)) {
@@ -41,7 +40,6 @@ int character::moveCharacter(char input, map& mapOne) {
         else {
             return 2;
         }
-        break;
     case 'S':
         newPosY += 1;
         if (canMoveTo(newPosX, newPosY, mapOne)) {
@@ -51,7 +49,6 @@ int character::moveCharacter(char input, map& mapOne) {
         else {
             return 2;
         }
-        break;
     case 'D':
         newPosX += 1;
         if (canMoveTo(newPosX, newPosY, mapOne)) {
@@ -61,13 +58,12 @@ int character::moveCharacter(char input, map& mapOne) {
         else {
             return 2;
         }
-        break;
     }
     mapOne.setArrayValue(posX, posY, getOnMap());
     return 2;
 }
 
-bool character::isHere(int x, int y) {
+bool character::isHere(int x, int y) const {
     if (posX == x && posY == y) {
         return true;
     }
@@ -80,7 +76,7 @@ bool character::isHere(int x, int y) {
 /**
  * @brief Getter that returns the player's mana points.
  */
-int player::getMana() {
+int player::getMana() const {
     return mana;
 }
 

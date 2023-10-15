@@ -28,7 +28,7 @@ public:
      * @brief Getter for the X position of the apple
      * @return The X position of the apple
      */
-    int apple::getPosX() {
+    int apple::getPosX() const{
         return posX;
     }
 
@@ -36,7 +36,7 @@ public:
      * @brief Getter for the Y position of the apple
      * @return The Y position of the apple
      */
-    int apple::getPosY() {
+    int apple::getPosY() const {
         return posY;
     }
 
@@ -51,7 +51,7 @@ public:
      * @brief Getter for the 'used' attribute of the apple
      * @return The 'used' attribute
      */
-    bool apple::getUsed() {
+    bool apple::getUsed() const {
         return used;
     }
 
@@ -82,7 +82,7 @@ public:
         apple(0, 0) {}
 
     superApple(int gposX, int gposY) :
-        apple(gposY, gposY) {}
+        apple(gposX, gposY) {}
 
     /**
      * @brief When the player 'eats' the super apple, they gain +100 mana

@@ -29,7 +29,7 @@ public:
     /**
      * @brief Getter that returns the character's health points (HP).
      */
-    int character::getHP() {
+    int character::getHP() const{
         return hp;
     }
 
@@ -44,14 +44,14 @@ public:
     /**
      * @brief Getter that returns the character's X position on the map.
      */
-    int character::getPosX() {
+    int character::getPosX() const{
         return posX;
     }
 
     /**
      * @brief Getter that returns the character's Y position on the map.
      */
-    int character::getPosY() {
+    int character::getPosY() const{
         return posY;
     }
 
@@ -74,7 +74,7 @@ public:
     /**
      * @brief Getter that returns whether the character is still alive.
      */
-    bool character::getAlive() {
+    bool character::getAlive() const{
         return alive;
     }
 
@@ -94,7 +94,7 @@ public:
      * @param int y - the Y position to check
      * @param map& mapOne - the map being checked
      */
-    bool canMoveTo(int x, int y, map& mapOne);
+    bool canMoveTo(int x, int y, map& mapOne) const;
 
     /**
      * @brief This function moves the character.
@@ -110,7 +110,7 @@ public:
      * @brief Calculates the distance between two characters.
      * @param character& c - the character for which the distance is measured
      */
-    int character::getDistance(character& c) {
+    int character::getDistance(character& c) const{
         return abs(sqrt(pow(posX - c.posX, 2) + pow(posY - c.posY, 2)));
     }
 
@@ -119,18 +119,18 @@ public:
      * @param int x - the X position to check
      * @param int y - the Y position to check
      */
-    bool isHere(int x, int y);
+    bool isHere(int x, int y) const;
     /**
      * @brief Getter that returns the character's representation on the map.
      */
-    char character::getOnMap() {
+    char character::getOnMap() const{
         return onMap;
     }
 
     /**
      * @brief Getter that returns the character's damage (damage points).
      */
-    int character::getDMG() {
+    int character::getDMG() const{
         return dmg;
     }
 
@@ -153,7 +153,7 @@ public:
     player(int ghp, int gposX, int gposY, int gmana, char gOnMap, int gdmg) :
         character(ghp, gposX, gposY, gOnMap, gdmg), mana(gmana) {}
 
-    int getMana();
+    int getMana() const;
     void setMana(int gMana);
 
     virtual void damagedManaBy(character* c) {
