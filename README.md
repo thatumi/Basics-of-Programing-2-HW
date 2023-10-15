@@ -1,14 +1,13 @@
-# Prog-2-Hazi
+# Basics of Programming 2 (Budapest University of Technology and Economics) Homework
 
-Egy parancssoros játék amit Programozás 2 alapjai (BME-VIK) házinak készítettem.
+This is a command-line game created for the Basics of Programming 2 course.
 
-A játék célja, hogy a játékos legyőzzön egy denevért és egy íjászt.
+The objective of the game is to defeat a bat and an archer.
 
-Az első kör után itemek is spawnolnak, amivel életerőnket és hpnkat tudjuk tölteni.
+After the first round, items spawn, allowing us to replenish our health and HP.
 
-A parancssorban látjuk minden lépésnél, hogy mivel mit tudunk csinálni, illetve DoxyGen doksi is van.
+In the command line, you can see what actions you can take at each step, and there is also documentation available.
 
-(A cportatest fájlokról annyit, hogy ez az egyetemnek volt automatikus tesztelő weboldala.)
-
+(Note: The "cportatest" files were part of the university's automatic testing website.)
 
 
